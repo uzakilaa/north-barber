@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>North Barber — барбершоп</title>
+<meta name="description" content="North Barber: мужские стрижки, оформление бороды, онлайн-запись.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<header id="header">
+  <div class="wrap">
+    <a href="#top" class="logo">North Barber</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav" aria-label="Открыть меню">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav" aria-label="Основное меню">
+      <a href="#services">Услуги</a>
+      <a href="#masters">Мастера</a>
+      <a href="#contacts">Контакты</a>
+      <a href="#booking" class="btn">Записаться</a>
+    </nav>
+  </div>
+</header>
+ 
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <h1>Стрижка, с которой не стыдно в понедельник</h1>
+      <p>Мужской барбершоп на три кресла. Без очередей: записываетесь на удобное время и приходите к назначенному часу.</p>
+      <div class="hero-row">
+        <a href="#booking" class="btn">Записаться на стрижку</a>
+        <div class="hours"><b>Ежедневно, 10:00–21:00</b>Последняя запись на 20:00</div>
+      </div>
+    </div>
+  </section>
+ 
+  <section id="services">
+    <div class="wrap">
+      <h2>Услуги и цены</h2>
+      <p class="lead">Цены фиксированные. Если мастер видит, что работы больше, он скажет об этом до начала.</p>
+      <ul class="menu" id="menu"></ul>
+    </div>
+  </section>
+ 
+  <section id="masters">
+    <div class="wrap">
+      <h2>Мастера</h2>
+      <div class="masters" id="masterList"></div>
+    </div>
+  </section>
+ 
+  <section id="booking">
+    <div class="wrap">
+      <h2>Онлайн-запись</h2>
+      <p class="lead">Заполните форму, и мы подтвердим запись сообщением на ваш номер.</p>
+ 
+      <form id="form" novalidate>
+        <div class="field">
+          <label for="name">Имя</label>
+          <input id="name" name="name" autocomplete="given-name">
+          <span class="err" id="err-name" aria-live="polite"></span>
+        </div>
+        <div class="field">
+          <label for="phone">Телефон</label>
+          <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="+7 7XX XXX XX XX" autocomplete="tel">
+          <span class="err" id="err-phone" aria-live="polite"></span>
+        </div>
+        <div class="field">
+          <label for="service">Услуга</label>
+          <select id="service" name="service"><option value="">Выберите услугу</option></select>
+          <span class="err" id="err-service" aria-live="polite"></span>
+        </div>
+        <div class="field">
+          <label for="master">Мастер</label>
+          <select id="master" name="master"><option value="Любой мастер">Любой мастер</option></select>
+          <span class="err" aria-hidden="true"></span>
+        </div>
+        <div class="field">
+          <label for="date">Дата</label>
+          <input id="date" name="date" type="date">
+          <span class="err" id="err-date" aria-live="polite"></span>
+        </div>
+        <div class="field">
+          <label for="time">Время</label>
+          <select id="time" name="time"><option value="">Выберите время</option></select>
+          <span class="err" id="err-time" aria-live="polite"></span>
+        </div>
+        <button type="submit" class="btn">Записаться</button>
+      </form>
+ 
+      <div class="ok" id="ok" hidden role="status">
+        <h3>Запись принята</h3>
+        <p id="okText"></p>
+        <dl id="okList"></dl>
+        <button type="button" id="again">Записать ещё одного человека</button>
+      </div>
+    </div>
+  </section>
+ 
+  <section id="contacts">
+    <div class="wrap">
+      <h2>Как нас найти</h2>
+      <div class="contacts">
+        <div><h3>Адрес</h3><p>г. Алматы, ул. Примерная, 12<br>вход со двора, 2 этаж</p></div>
+        <div><h3>Телефон</h3><p>+7 700 000 00 00<br>отвечаем с 10:00 до 20:00</p></div>
+        <div><h3>Соцсети</h3><p>Instagram: @northbarber.demo<br>Telegram: @northbarber_demo</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+ 
+<footer>
+  <div class="wrap">© 2026 North Barber. Демонстрационный проект: бренд и контакты вымышлены.</div>
+</footer>
+ 
+<script src="script.js"></script>
+</body>
+</html>
+ 
